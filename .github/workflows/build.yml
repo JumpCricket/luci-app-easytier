@@ -5,11 +5,11 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: ''
+        description: 'v2.3.2'
         required: false
         default: ''
       text:
-        description: ''
+        description: 'v2.3.2-release'
         required: false
         default: ''
 concurrency:
@@ -53,8 +53,9 @@ jobs:
           # - mipsel_mips32
           - x86_64
         sdk:
-          - openwrt-22.03
+          # - openwrt-22.03
           - openwrt-24.10.2
+          - SNAPSHOT
 
     steps:
       - uses: actions/checkout@v4
